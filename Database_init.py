@@ -22,6 +22,8 @@ asx_200 = asx_200[0][0]
 asx_200 = asx_200[1:]
 asx_200.columns = ['Symbol']
 asx_200 = asx_200.str.lower()
+asx_200 = asx_200.head(5)
+
 
 
 #Setting up database
@@ -67,9 +69,10 @@ for stock in asx_200:
         print('                         ')
         time.sleep(15)
 
-
 #Sending list of stocks sucessfully pulled to CSV for update script
 stock_list = pd.DataFrame(asx_stocks)
-stock_list.to_csv('ASX_API_stocks.csv')
+stock_list.to_csv('ASX_API_stocks.csv',index=False)
+
+con.execute('CREATE TABLE Update_stats (Id int NOT NULL AUTO_INCREMENT PRIMARY KEY, Date date NOT NULL , Stocks_Updated int(5), Entries_Updated int(5), Stocks_Failed int(5))')
 
 con.close()   
