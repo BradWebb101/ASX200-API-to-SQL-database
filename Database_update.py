@@ -70,7 +70,7 @@ for i in range(len(stocks)):
         time.sleep(15)
 
 #Updating stats on update    
-con.execute(('INSERT INTO update_stats (Date, Stocks_Updated, Entries_Updated, Stocks_Failed) VALUES("{}","{}","{}","{}")').format(date, len(stock_updated), entries_updated, stocks_failed))
+con.execute(('INSERT INTO Update_stats (Date, Stocks_Updated, Entries_Updated, Stocks_Failed) VALUES("{}","{}","{}","{}")').format(date, len(stock_updated), entries_updated, stocks_failed))
 print(('On {} this code updated {} stocks with {} entries total with {} stock requests failed').format(date, len(stock_updated), entries_updated, stocks_failed))
 
 
