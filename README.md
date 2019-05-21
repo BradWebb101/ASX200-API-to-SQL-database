@@ -11,9 +11,9 @@ This script is running on my Raspberry Pi, using Cron as a scheduler to request 
 
 ## Technologies
 Project was created with Python 3.7, libraries include:
-*Pandas
-*SQL Alchemy
-*Time
+* Pandas
+* SQL Alchemy
+* Time
 
 ## Setup
 To run this project, install it locally using npm:
