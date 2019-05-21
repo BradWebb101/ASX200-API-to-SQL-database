@@ -15,16 +15,12 @@ SQL_user = credentials.loc[0,'SQL_user']
 SQL_pass = credentials.loc[0,'SQL_pass']
 API_key = credentials.loc[0,'API_key']
 
-
 #Creating list of stocks for table
 asx_200 = pd.read_html('https://en.wikipedia.org/wiki/S%26P/ASX_200')
 asx_200 = asx_200[0][0]
 asx_200 = asx_200[1:]
 asx_200.columns = ['Symbol']
 asx_200 = asx_200.str.lower()
-asx_200 = asx_200.head(5)
-
-
 
 #Setting up database
 engine = sqlalchemy.create_engine('mysql+mysqlconnector://' + str(SQL_user) + ':' + str(SQL_pass) + '@localhost:3306')
