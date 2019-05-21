@@ -1,4 +1,4 @@
-# ASX200 - API ----> SQL database
+# ASX200 - API to SQL database
 
 ## Table of contents
 * [Introduction](#Introduction)
@@ -6,8 +6,8 @@
 * [Setup](#Setup)
 
 ## Introduction 
-This project is to reduce script running time and allow for easier access to ASX200 stock prices. Currently there is limited free API's for ASX200 stock prices, current API for this file has a limit of 5 requests per minute. This means over 40 minutes to run a full request for ASX200 stock prices. 
-This script is running on my Raspberry Pi, using Cron as a scheduler to request updated stock rpices at close of ASX market and updates SQL server. 
+This project is to reduce script running time and allow for easier access to ASX200 stock prices due to limitations on free stock price API's requests. 
+This script is running on my Raspberry Pi, using Cron as a scheduler to request updated stock prices at close of ASX market and updates SQL server. Using SQL alchemy to SQL queries to create database, update tables and report on stock updates. 
 
 ## Technologies
 Project was created with Python 3.7, libraries include:
