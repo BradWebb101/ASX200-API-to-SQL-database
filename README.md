@@ -6,8 +6,8 @@
 * [Setup](#Setup)
 
 ## Introduction 
-This project is to reduce script running time and allow for easier access to ASX200 stock prices due to limitations on free stock price API's requests. 
-This script is running on my Raspberry Pi, using Cron as a scheduler to request updated stock prices at close of ASX market and updates SQL server. Using SQL alchemy to SQL queries to create database, update tables and report on stock updates. 
+This project is to reduce script running time and allow for easier access to ASX200 stock prices due request limits on free API's. 
+This script is running on a Raspberry Pi, using Cron as a scheduler, The script requests stock prices at close of ASX market and updates the SQL server. Using SQL alchemy as the connection engine.
 
 ## Technologies
 Project was created with Python 3.7, libraries include:
